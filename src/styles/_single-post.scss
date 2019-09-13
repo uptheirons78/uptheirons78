@@ -1,0 +1,67 @@
+.single-post {
+  margin: 0 auto;
+  max-width: 800px;
+
+  &__frontmatter {
+    h1 {
+      color: $heading-color;
+      font-size: 2rem;
+      margin-bottom: .4rem;
+    }
+    span {
+      color: $meta-color;
+      font-size: .9rem;
+    }
+    .featured-image {
+      margin: 0 auto;
+      margin-top: 2rem;
+      max-width: 720px;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+  }
+
+  &__body {
+    margin-top: 2.2rem;
+
+    h1,h2,h3,h4,h5,h6 {
+      color: $heading-color;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: $p-color;
+      font-size: 1rem;
+    }
+    strong {
+      color: $main-color;
+    }
+    em {
+      color: $main-color;
+    }
+    a {
+      &,
+      &:active,
+      &:visited {
+        display: inline-block;
+        margin-right: .7rem;
+        text-decoration: none;
+        padding: 0 6px;
+        box-shadow: 0px -30px 0px 0px $main-color inset;
+        color: #fff;
+        transition: all 350ms ease-in-out;
+      }
+      &:hover{
+        box-shadow: 0px -2px 0px 0px $main-color inset;
+        color: $meta-color;
+      }
+      &:active,
+      &:focus {
+        outline: none;
+      }
+    }
+    code {
+      font-size: .8rem;
+    }
+  }
+}
