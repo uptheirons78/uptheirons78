@@ -1,8 +1,9 @@
 .post {
   margin-bottom: 3rem;
   &__title {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 0.7rem;
+    line-height: 2rem;
 
     &-link {
       &,
@@ -28,11 +29,11 @@
 
   &__meta {
     display: flex;
-    font-size: .9rem;
+    font-size: 0.9rem;
 
     .post__date {
       color: $meta-color;
-      padding-right: .5rem;
+      padding-right: 0.5rem;
       border-right: 2px solid $meta-color;
     }
   }
@@ -47,7 +48,7 @@
       margin-left: 0.5rem;
       span {
         color: $meta-color;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
       }
 
       &__link {
@@ -55,14 +56,14 @@
         &:active,
         &:visited {
           display: block;
-          margin-right: .7rem;
+          margin-right: 0.7rem;
           text-decoration: none;
           padding: 0 6px;
           box-shadow: 0px -30px 0px 0px $main-color inset;
           color: #fff;
           transition: all 350ms ease-in-out;
         }
-        &:hover{
+        &:hover {
           box-shadow: 0px -2px 0px 0px $main-color inset;
           color: $meta-color;
         }
@@ -75,25 +76,27 @@
   }
 
   &__read {
-    font-size: .9rem;
+    font-size: 0.9rem;
     color: $meta-color;
   }
 
   &__excerpt {
     color: $p-color;
+    font-size: 0.9rem;
+    text-align: justify;
     margin-top: 1rem;
     &-link {
       &,
       &:active,
       &:visited {
-        font-size: .9rem;
+        font-size: 0.9rem;
         text-decoration: none;
         padding: 0 6px;
         box-shadow: 0px -30px 0px 0px $main-color inset;
         color: #fff;
         transition: all 350ms ease-in-out;
       }
-      &:hover{
+      &:hover {
         box-shadow: 0px -2px 0px 0px $main-color inset;
         color: $p-color;
       }

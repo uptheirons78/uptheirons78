@@ -3,7 +3,7 @@ path: /blog/javascript-array-methods-you-must-know-to-become-an-algorithms-wizar
 title: Javascript Array Methods You Must Know To Become An Algorithms Wizard
 date: 2019-07-09
 thumbnail: "../../images/thumbnails/array-methods.jpg"
-tags: ['javascript', 'codenewbie', 'beginners', 'webdev']
+tags: ["javascript", "codenewbie", "beginners", "webdev"]
 author: Mauro Bono
 ---
 
@@ -16,10 +16,17 @@ If you are interested in String Methods you can check my previous post about the
 
 First thing first before talking about array methods **always remember** array index starts at **0** !
 
-1) Getting the length of any array with **_.length_** .
+1. Getting the length of any array with **_.length_** .
 
 ```javascript
-const avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow'];
+const avengers = [
+  "Captain America",
+  "Iron Man",
+  "Thor",
+  "Hulk",
+  "Hawkeye",
+  "Black Widow",
+];
 console.log(avengers.length); //6
 //This is a mutable property...you can change it "manually"
 avengers.length = 8;
@@ -28,9 +35,17 @@ console.log(avengers); //["Captain America", "Iron Man", "Thor", "Hulk", "Hawkey
 console.log(avengers[7]); //undefined
 ```
 
-2) Remove last item of an array with **_pop()_**. It changes the length of the array and returns the removed element.
+2. Remove last item of an array with **_pop()_**. It changes the length of the array and returns the removed element.
+
 ```javascript
-const avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow'];
+const avengers = [
+  "Captain America",
+  "Iron Man",
+  "Thor",
+  "Hulk",
+  "Hawkeye",
+  "Black Widow",
+];
 console.log(avengers.pop()); //Black Widow
 console.log(avengers); //[ 'Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye' ]
 console.log(avengers.length); //5
@@ -40,9 +55,17 @@ const emptyArray = [];
 console.log(emptyArray.pop()); //undefined
 ```
 
-3) Remove first item of an array with **_shift()_**. It changes the length of the array and returns the removed item.
+3. Remove first item of an array with **_shift()_**. It changes the length of the array and returns the removed item.
+
 ```javascript
-const avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow'];
+const avengers = [
+  "Captain America",
+  "Iron Man",
+  "Thor",
+  "Hulk",
+  "Hawkeye",
+  "Black Widow",
+];
 console.log(avengers.shift()); //Captain America
 console.log(avengers); //['Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow' ]
 console.log(avengers.length); //5
@@ -52,29 +75,46 @@ const emptyArray = [];
 console.log(emptyArray.shift()); //undefined
 ```
 
-4) Add one or more items at the end of an array with **_push()_**. It returns and changes the length of the array.
+4. Add one or more items at the end of an array with **_push()_**. It returns and changes the length of the array.
+
 ```javascript
-const avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow'];
-console.log(avengers.push('DeadPool')); // 7
+const avengers = [
+  "Captain America",
+  "Iron Man",
+  "Thor",
+  "Hulk",
+  "Hawkeye",
+  "Black Widow",
+];
+console.log(avengers.push("DeadPool")); // 7
 console.log(avengers); //['Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow', 'DeadPool']
 
-const animals = ['snake', 'bear', 'hawk'];
-console.log(animals.push('monkey', 'cat', 'dog')); // 6
+const animals = ["snake", "bear", "hawk"];
+console.log(animals.push("monkey", "cat", "dog")); // 6
 console.log(animals); //[ 'snake', 'bear', 'hawk', 'monkey', 'cat', 'dog' ]
 ```
 
-5) Add one or more items to the beginning of an array with **_unshift()_**. It returns and changes the length of the array.
+5. Add one or more items to the beginning of an array with **_unshift()_**. It returns and changes the length of the array.
+
 ```javascript
-const avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow'];
-console.log(avengers.unshift('DeadPool')); // 7
+const avengers = [
+  "Captain America",
+  "Iron Man",
+  "Thor",
+  "Hulk",
+  "Hawkeye",
+  "Black Widow",
+];
+console.log(avengers.unshift("DeadPool")); // 7
 console.log(avengers); //['DeadPool', 'Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow']
 
-const animals = ['snake', 'bear', 'hawk'];
-console.log(animals.unshift('monkey', 'cat', 'dog')); // 6
+const animals = ["snake", "bear", "hawk"];
+console.log(animals.unshift("monkey", "cat", "dog")); // 6
 console.log(animals); //['monkey', 'cat', 'dog', 'snake', 'bear', 'hawk']
 ```
 
-6) Merge an array with one or more arrays with **_concat()_**. It will not change the original array, but creats a new one. With ES6 **_spred operator_** it is possible to get the same result. It consists in three dots **...** placed in front of the array you want to spread and has the effect of spreading out all the values in each array, which allows them to be placed inside a new array.
+6. Merge an array with one or more arrays with **_concat()_**. It will not change the original array, but creats a new one. With ES6 **_spred operator_** it is possible to get the same result. It consists in three dots **...** placed in front of the array you want to spread and has the effect of spreading out all the values in each array, which allows them to be placed inside a new array.
+
 ```javascript
 const firstArr = [0, 1, 2, 3, 4, 5];
 const secondArr = [6, 7, 8, 9, 10];
@@ -89,18 +129,34 @@ console.log([...secondArr, ...firstArr]); //[ 6, 7, 8, 9, 10, 0, 1, 2, 3, 4, 5 ]
 console.log([...secondArr, ...firstArr, ...secondArr]); //[ 6, 7, 8, 9, 10, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 ```
 
-7) Turn an array into a string with **_join()_**. The string comprises all the items in the array separated by commas. Attention: You can choose a separator other than a comma by placing it inside the brackets.
+7. Turn an array into a string with **_join()_**. The string comprises all the items in the array separated by commas. Attention: You can choose a separator other than a comma by placing it inside the brackets.
+
 ```javascript
-const avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow'];
+const avengers = [
+  "Captain America",
+  "Iron Man",
+  "Thor",
+  "Hulk",
+  "Hawkeye",
+  "Black Widow",
+];
 console.log(avengers.join()); //Captain America,Iron Man,Thor,Hulk,Hawkeye,Black Widow
-console.log(avengers.join(' - ')); //Captain America - Iron Man - Thor - Hulk - Hawkeye - Black Widow
-console.log(avengers.join(', ')); //Captain America, Iron Man, Thor, Hulk, Hawkeye, Black Widow
-console.log(avengers.join(' & ')); //Captain America & Iron Man & Thor & Hulk & Hawkeye & Black Widow
+console.log(avengers.join(" - ")); //Captain America - Iron Man - Thor - Hulk - Hawkeye - Black Widow
+console.log(avengers.join(", ")); //Captain America, Iron Man, Thor, Hulk, Hawkeye, Black Widow
+console.log(avengers.join(" & ")); //Captain America & Iron Man & Thor & Hulk & Hawkeye & Black Widow
 ```
 
-8) Create a subarray with **_slice()_**. It chops out a slice of the original array starting from one position and ending to another. This is a non-destructive operation! The original array remains the same.
+8. Create a subarray with **_slice()_**. It chops out a slice of the original array starting from one position and ending to another. This is a non-destructive operation! The original array remains the same.
+
 ```javascript
-const avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow'];
+const avengers = [
+  "Captain America",
+  "Iron Man",
+  "Thor",
+  "Hulk",
+  "Hawkeye",
+  "Black Widow",
+];
 console.log(avengers.slice(2, 4)); //[ 'Thor', 'Hulk' ]
 console.log(avengers.slice(0, 1)); //[ 'Captain America' ]
 console.log(avengers); //['Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow']
@@ -115,18 +171,24 @@ console.log(avengers.slice(-2)); //[ 'Hawkeye', 'Black Widow' ]
 console.log(avengers.slice(2, -2)); //[ 'Thor', 'Hulk' ]
 ```
 
-9) Change the content of an array, removing, replacing or adding items with **_splice()_**. It takes a first parameter (usually called **start**) equal to index where to start changing the array, a second parameter (**itemsToDelete**) equal to the number of items to remove from **start**. Every value after this is then inserted into the array in the same place the other items were removed. The return value is an array containing the deleted elements. It is a destructive method and it changes the original array.
+9. Change the content of an array, removing, replacing or adding items with **_splice()_**. It takes a first parameter (usually called **start**) equal to index where to start changing the array, a second parameter (**itemsToDelete**) equal to the number of items to remove from **start**. Every value after this is then inserted into the array in the same place the other items were removed. The return value is an array containing the deleted elements. It is a destructive method and it changes the original array.
 
 ```javascript
-const animals = ['monkey', 'bull', 'python', 'cow'];
-console.log(animals.splice(3, 1, 'gorilla')); //[ 'cow' ]
+const animals = ["monkey", "bull", "python", "cow"];
+console.log(animals.splice(3, 1, "gorilla")); //[ 'cow' ]
 console.log(animals); //[ 'monkey', 'bull', 'python', 'gorilla' ]
 console.log(animals.splice(2, 2)); //[ 'python', 'gorilla' ];
 console.log(animals); //[ 'monkey', 'bull' ]
 
 //The splice() method can be used to insert values into an array at a specific index without removing any items, by indicating that zero items are to be removed:
-const bestMetalBands = ['Iron Maiden', 'Slayer', 'Pantera', 'Megadeth', 'Judas Priest'];
-console.log(bestMetalBands.splice(2, 0, 'Saxon')); //[]
+const bestMetalBands = [
+  "Iron Maiden",
+  "Slayer",
+  "Pantera",
+  "Megadeth",
+  "Judas Priest",
+];
+console.log(bestMetalBands.splice(2, 0, "Saxon")); //[]
 console.log(bestMetalBands); //['Iron Maiden', 'Slayer', 'Saxon', 'Pantera', 'Megadeth', 'Judas Priest']
 console.log(bestMetalBands.splice(2, 2)); //[ 'Saxon', 'Pantera' ]
 console.log(bestMetalBands); //[ 'Iron Maiden', 'Slayer', 'Megadeth', 'Judas Priest' ]
@@ -136,16 +198,30 @@ console.log(bestMetalBands.splice(2, 1)); //[ 'Slayer' ]
 console.log(bestMetalBands); //[ 'Iron Maiden', 'Megadeth', 'Judas Priest' ]
 ```
 
-10) Reverse the order of an array with **_reverse()_**. It changes the order of the array permanently.
+10. Reverse the order of an array with **_reverse()_**. It changes the order of the array permanently.
+
 ```javascript
-const bestMetalBands = ['Iron Maiden', 'Slayer', 'Pantera', 'Megadeth', 'Judas Priest'];
+const bestMetalBands = [
+  "Iron Maiden",
+  "Slayer",
+  "Pantera",
+  "Megadeth",
+  "Judas Priest",
+];
 console.log(bestMetalBands.reverse()); //[ 'Judas Priest', 'Megadeth', 'Pantera', 'Slayer', 'Iron Maiden' ]
 console.log(bestMetalBands); //[ 'Judas Priest', 'Megadeth', 'Pantera', 'Slayer', 'Iron Maiden' ]
 ```
 
-11) Sort the order of an array with **_sort()_**. It takes a so called **compareFunction** as parameter. If not defined the default sort order is built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values. This will create problems if a compareFunction is not defined for sorting an array of integers because they will be sorted alphabetically!
+11. Sort the order of an array with **_sort()_**. It takes a so called **compareFunction** as parameter. If not defined the default sort order is built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values. This will create problems if a compareFunction is not defined for sorting an array of integers because they will be sorted alphabetically!
+
 ```javascript
-const bestMetalBands = ['Iron Maiden', 'Slayer', 'Pantera', 'Megadeth', 'Judas Priest'];
+const bestMetalBands = [
+  "Iron Maiden",
+  "Slayer",
+  "Pantera",
+  "Megadeth",
+  "Judas Priest",
+];
 console.log(bestMetalBands.sort()); //[ 'Iron Maiden', 'Judas Priest', 'Megadeth', 'Pantera', 'Slayer' ]
 
 const numbers = [4, 2, 5, 1, 3];
@@ -155,16 +231,24 @@ console.log(numbers.sort((a, b) => a - b)); //[ 1, 2, 3, 4, 5 ]
 console.log(numbers.sort((a, b) => b - a)); //[ 5, 4, 3, 2, 1 ]
 ```
 
-12) Find the first occurrence of a value inside an array with **_indexOf()_**. If the value is in the array it returns the index of the first occurrence of that value. If not it returns -1. It has also a second optional parameter called **fromIndex**. The index where to start the search. If it is negative it is taken as the offset from the end of the array.
+12. Find the first occurrence of a value inside an array with **_indexOf()_**. If the value is in the array it returns the index of the first occurrence of that value. If not it returns -1. It has also a second optional parameter called **fromIndex**. The index where to start the search. If it is negative it is taken as the offset from the end of the array.
+
 ```javascript
-const bestMetalBands = ['Iron Maiden', 'Slayer', 'Pantera', 'Megadeth', 'Judas Priest'];
-console.log(bestMetalBands.indexOf('Iron Maiden')); //0
-console.log(bestMetalBands.indexOf('Megadeth')); //3
-console.log(bestMetalBands.indexOf('Metallica')); //-1 ...they are no more a metal band ;)
-console.log(bestMetalBands.indexOf('Iron Maiden', 2)); //-1
+const bestMetalBands = [
+  "Iron Maiden",
+  "Slayer",
+  "Pantera",
+  "Megadeth",
+  "Judas Priest",
+];
+console.log(bestMetalBands.indexOf("Iron Maiden")); //0
+console.log(bestMetalBands.indexOf("Megadeth")); //3
+console.log(bestMetalBands.indexOf("Metallica")); //-1 ...they are no more a metal band ;)
+console.log(bestMetalBands.indexOf("Iron Maiden", 2)); //-1
 ```
 
-13) Find the last occurrence of a value inside an array with **_lastIndexOf()_**. If the value is in the array it returns the index of the last occurrence of that value. If not it returns -1. It has also a second optional parameter called **fromIndex**. The index where to start the search. If it is negative it is taken as the offset from the end of the array.
+13. Find the last occurrence of a value inside an array with **_lastIndexOf()_**. If the value is in the array it returns the index of the last occurrence of that value. If not it returns -1. It has also a second optional parameter called **fromIndex**. The index where to start the search. If it is negative it is taken as the offset from the end of the array.
+
 ```javascript
 const numbers = [4, 2, 5, 1, 3, 5, 3];
 console.log(numbers.lastIndexOf(5)); //5
@@ -173,17 +257,25 @@ console.log(numbers.lastIndexOf(3, -3)); //4
 console.log(numbers.lastIndexOf(42)); //-1 ...It is hard to find the Meaning of Life
 ```
 
-14) Find if an array contains an item or not with **_includes()_**. It will return a boolean value: true or false. It is possible to use also here the **fromIndex** parameter like in indexOf() or lastIndexOf().
+14. Find if an array contains an item or not with **_includes()_**. It will return a boolean value: true or false. It is possible to use also here the **fromIndex** parameter like in indexOf() or lastIndexOf().
+
 ```javascript
-const bestMetalBands = ['Iron Maiden', 'Slayer', 'Pantera', 'Megadeth', 'Judas Priest'];
-console.log(bestMetalBands.includes('Slayer')); //true
-console.log(bestMetalBands.includes('Slayer', 3)); //false
-console.log(bestMetalBands.includes('Metallica')); //false...Again? They are no more a metal band!
+const bestMetalBands = [
+  "Iron Maiden",
+  "Slayer",
+  "Pantera",
+  "Megadeth",
+  "Judas Priest",
+];
+console.log(bestMetalBands.includes("Slayer")); //true
+console.log(bestMetalBands.includes("Slayer", 3)); //false
+console.log(bestMetalBands.includes("Metallica")); //false...Again? They are no more a metal band!
 ```
 
-15) Take values out of an array and present them as an individual value with **_Destructuring_**. This is not an array method but a special syntax that let us unpack arrays (and objects) into variables. It is very handy when it comes to solve algorithms.
+15. Take values out of an array and present them as an individual value with **_Destructuring_**. This is not an array method but a special syntax that let us unpack arrays (and objects) into variables. It is very handy when it comes to solve algorithms.
+
 ```javascript
-const bestMetalBands = ['Iron Maiden', 'Slayer', 'Pantera'];
+const bestMetalBands = ["Iron Maiden", "Slayer", "Pantera"];
 const [ironMaiden, slayer, pantera] = bestMetalBands;
 console.log(ironMaiden); // Iron Maiden
 console.log(slayer); //Slayer
@@ -206,5 +298,6 @@ On [Codewars](https://www.codewars.com/) you can look for 7kyu or 6kyu algorithm
 
 I will update this article with new information and some algorithms on arrays, based on the reactions and comments.
 
-
 **_Code Long And Prosper_**
+
+This post was originally published on [Dev.to](https://dev.to/uptheirons78/javascript-arrays-methods-you-must-know-to-become-an-algorithms-wizard-2ec7)

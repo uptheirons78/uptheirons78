@@ -7,7 +7,7 @@ import Img from "gatsby-image";
 const ProjectsPage = ({ data }) => (
   <Layout>
     <SEO
-      title="Home"
+      title="Projects"
       keywords={[`gatsby`, `application`, `react`, `portfolio`]}
     />
     <h1>Projects</h1>
