@@ -1,11 +1,9 @@
 header {
   width: 100%;
-  background-color: $main-color;
 
   .container {
-    background: $main-color;
     width: 100%;
-    max-width: 120rem;
+    max-width: 960px;
     margin: 0 auto;
     padding: 0 1.5rem;
 
@@ -18,9 +16,8 @@ header {
 
       .navbar-brand {
         text-decoration: none;
-        font-size: 2.6rem;
-        color: #f4f4f4;
-        text-transform: uppercase;
+        font-size: 2.2rem;
+        color: $main-color;
         font-family: "Open Sans", sans-serif;
         font-weight: 800;
       }
@@ -56,7 +53,7 @@ header {
             position: absolute;
             width: 100%;
             height: 2px;
-            background-color: #ff4f79;
+            background-color: $main-color;
             left: 0;
             bottom: 0;
             transform: scaleX(0);
@@ -70,8 +67,10 @@ header {
           }
 
           .nav-link {
-            font-size: 1.6rem;
-            color: #f4f4f4;
+            font-size: 1.8rem;
+            font-family: 'OpenSans', sans-serif;
+            font-weight: 700;
+            color: $main-color;
             text-decoration: none;
             display: block;
             margin: 0 2rem;
@@ -115,10 +114,11 @@ header {
         line-height: 5rem;
         z-index: 1500;
 
+
         .line {
           width: 100%;
           height: 2px;
-          background-color: #fff;
+          background-color: $main-color;
           position: absolute;
           display: block;
           right: 0;
@@ -173,8 +173,37 @@ header {
 
       &.active {
         bottom: 0;
+
+        .nav-item:nth-child(1) .nav-link {
+          color: #f4f4f4;
+        }
+        .nav-item:nth-child(2) .nav-link {
+          color: #f4f4f4;
+        }
+        .nav-item:nth-child(3) .nav-link {
+          color: #f4f4f4;
+        }
+        .nav-item:nth-child(4) .nav-link {
+          color: #f4f4f4;
+        }
+        .nav-item:nth-child(5) .nav-link {
+          color: #f4f4f4;
+        }
+
       }
     }
+
+    .hamburger.active {
+      & .line {
+        &:nth-child(1) {
+          background-color: #fff;
+        }
+        &:nth-child(3) {
+          background-color: #fff;
+        }
+      }
+    }
+
   }
 }
 

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
+import IosIonic from "react-ionicons/lib/IosIonic";
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   const [hamburgerState, setHamburgerState] = useState(false);
   const hamburgerStyle = hamburgerState ? "hamburger active" : "hamburger";
   const navListStyle = hamburgerState ? "nav-list active" : "nav-list";
@@ -11,7 +12,12 @@ const Header = ({ siteTitle }) => {
       <div className="container">
         <nav>
           <Link className="navbar-brand" to="/">
-            {siteTitle}
+            <IosIonic
+              rotate={true}
+              fontSize="5rem"
+              color="#03afc2"
+              className="icon"
+            />
           </Link>
           <ul className={navListStyle}>
             <li className="nav-item">
@@ -40,13 +46,15 @@ const Header = ({ siteTitle }) => {
               </Link>
             </li>
           </ul>
-          <div
-            className={hamburgerStyle}
-            onClick={() => setHamburgerState(!hamburgerState)}
-          >
-            <span className="line"></span>
-            <span className="line"></span>
-            <span className="line"></span>
+          <div className="hamburger-container">
+            <div
+              className={hamburgerStyle}
+              onClick={() => setHamburgerState(!hamburgerState)}
+            >
+              <span className="line"></span>
+              <span className="line"></span>
+              <span className="line"></span>
+            </div>
           </div>
         </nav>
       </div>

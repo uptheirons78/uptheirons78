@@ -1,0 +1,22 @@
+@media (min-width: 992px) {
+  .site {
+    padding: 4rem 10rem;
+  }
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding: 1rem 4rem 4rem 4rem;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  flex-grow: 1;
+  margin-top: 6vh;
+}
