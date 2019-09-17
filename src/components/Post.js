@@ -35,12 +35,10 @@ const Post = ({ post }) => {
       </div>
       <span className="post__read">{post.timeToRead} min read</span>
       <div className="post__excerpt">
-        <p>
-          {post.excerpt}{" "}
-          <Link to={path} className="post__excerpt-link">
-            Read More
-          </Link>
-        </p>
+        <p>{post.excerpt} </p>
+        <Link to={path} className="post__excerpt-link">
+          Read More
+        </Link>
       </div>
     </article>
   );

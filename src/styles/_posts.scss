@@ -1,9 +1,22 @@
 .post {
   margin-bottom: 3rem;
+  padding: 5rem 0 5rem 0;
+
+  @include for-tablet-portrait {
+    padding: 3rem 0 3rem 0;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba($main-color, .2);
+  }
   &__title {
-    font-size: 1.4rem;
-    margin-bottom: 0.7rem;
-    line-height: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    line-height: 3rem;
+
+    @include for-tablet-landscape {
+      font-size: 1.8rem;
+    }
 
     &-link {
       &,
@@ -29,23 +42,45 @@
 
   &__meta {
     display: flex;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
+
+    @include for-tablet-portrait {
+      font-size: 1.2rem;
+    }
+
+    @include for-tablet-portrait {
+      font-size: 1.2rem;
+    }
+
+    @include for-mobile {
+      flex-direction: column;
+    }
 
     .post__date {
       color: $meta-color;
       padding-right: 0.5rem;
       border-right: 2px solid $meta-color;
+
+      @include for-mobile {
+        border-right: none;
+      }
     }
   }
 
   .tags-container {
     height: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     .taglist {
       list-style-type: none;
       display: flex;
       margin-left: 0.5rem;
+
+      @include for-mobile {
+        margin-left: 0;
+        margin-top: 0.5rem;
+      }
+
       span {
         color: $meta-color;
         margin-right: 0.5rem;
@@ -76,25 +111,44 @@
   }
 
   &__read {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     color: $meta-color;
+    @include for-tablet-portrait {
+      font-size: 1.2rem;
+    }
   }
 
   &__excerpt {
     color: $p-color;
-    font-size: 0.9rem;
+    font-size: 1.6rem;
     text-align: justify;
     margin-top: 1rem;
+
+    @include for-tablet-landscape {
+      font-size: 1.4rem;
+    }
+
+    @include for-tablet-portrait {
+      font-size: 1.3rem;
+    }
+
     &-link {
       &,
       &:active,
       &:visited {
-        font-size: 0.9rem;
+        display: inline-block;
+        margin-top: 1rem;
+        font-size: 1.4rem;
         text-decoration: none;
         padding: 0 6px;
         box-shadow: 0px -30px 0px 0px $main-color inset;
         color: #fff;
         transition: all 350ms ease-in-out;
+
+        @include for-tablet-portrait {
+          font-size: 1.2rem;
+        }
+
       }
       &:hover {
         box-shadow: 0px -2px 0px 0px $main-color inset;

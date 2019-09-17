@@ -1,17 +1,42 @@
 .single-post {
   margin: 0 auto;
   max-width: 800px;
+  margin-bottom: 3vh;
+
+  @include for-tablet-landscape {
+    max-width: 750px;
+  }
+  @include for-tablet-portrait {
+    max-width: 650px;
+  }
+  @include for-mobile {
+    max-width: 600px;
+  }
+
+  @include for-small-mobile {
+    max-width: 420px;
+  }
 
   &__frontmatter {
     text-align: center;
     h1 {
       color: $heading-color;
-      font-size: 1.6rem;
+      font-size: 2.2rem;
       margin-bottom: 0.4rem;
+
+      @include for-tablet-landscape {
+        font-size: 1.8rem;
+      }
+      @include for-small-mobile {
+        font-size: 1.8rem;
+      }
     }
     span {
       color: $meta-color;
-      font-size: 0.9rem;
+      font-size: 1.6rem;
+      @include for-tablet-landscape {
+        font-size: 1.5rem;
+      }
     }
     .featured-image {
       margin: 0 auto;
@@ -19,6 +44,12 @@
       max-width: 720px;
       border-radius: 18px;
       overflow: hidden;
+      @include for-tablet-landscape {
+        max-width: 680px;
+      }
+      @include for-mobile {
+        max-width: 400px;
+      }
     }
   }
 
@@ -32,20 +63,40 @@
     h5,
     h6 {
       color: $heading-color;
-      font-size: 1.2rem;
+      font-size: 1.8rem;
       margin-top: 1rem;
       margin-bottom: 1rem;
+      @include for-tablet-landscape {
+        font-size: 1.6rem;
+      }
     }
     p {
       color: $p-color;
-      font-size: 1rem;
+      font-size: 1.6rem;
+      margin: .7rem 0;
+
+      @include for-tablet-landscape {
+        font-size: 1.4rem;
+      }
     }
     strong {
       color: $main-color;
     }
     em {
       color: $main-color;
+      font-size: 1.6rem;
+      font-style: italic;
+      @include for-tablet-landscape {
+        font-size: 1.4rem;
+      }
     }
+    li {
+      font-size: 1.6rem;
+      @include for-mobile {
+        font-size: 1.4rem;
+      }
+    }
+
     a {
       &,
       &:active,
@@ -67,7 +118,10 @@
       }
     }
     code {
-      font-size: 0.8rem;
+      font-size: 1.6rem;
+      @include for-tablet-landscape {
+        font-size: 1.4rem;
+      }
     }
   }
 }

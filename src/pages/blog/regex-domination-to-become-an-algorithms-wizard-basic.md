@@ -146,7 +146,7 @@ console.log(result); //['force', 'force', 'Force'];
 
 It matches any single character in the string from characters present inside the square brackets **/[abc]/**.
 For instance the above **/[abc]/** means "hey, look for **a**, **b** or **c** inside the string"
-Syntax: `/[abc]/`  
+Syntax: `/[abc]/`
 It matches a, b or c inside a string.
 Examples:
 

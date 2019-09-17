@@ -167,6 +167,7 @@ header {
       justify-content: center;
       background-color: $main-color;
       position: fixed;
+      z-index: 1400;
       left: 0;
       bottom: -100vh;
       transition: bottom 650ms;

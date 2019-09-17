@@ -4,6 +4,8 @@
   }
 }
 
+
+
 .site {
   display: flex;
   flex-direction: column;
@@ -11,6 +13,10 @@
   align-items: center;
   min-height: 90vh;
   padding: 1rem 4rem 4rem 4rem;
+
+  @include for-small-mobile {
+    padding: 1rem 1rem 1rem 1rem;
+  }
 }
 
 main {
