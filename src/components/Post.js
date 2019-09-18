@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import { kebabCase } from "lodash";
 
 const Post = ({ post }) => {
-  console.log(post);
   const { title, date, path, tags } = post.frontmatter;
 
   return (

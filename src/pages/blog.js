@@ -3,13 +3,14 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Post from "../components/Post";
 import SEO from "../components/seo";
+import PageTitle from "../components/PageTitle";
 
 const BlogPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   return (
     <Layout>
       <SEO title="Blog" />
-      <h1 className="page-title">Blog</h1>
+      <PageTitle pageTitle="Blog" />
       <div className="post-list">
         {posts.map(post => {
           return <Post key={post.node.id} post={post.node} />;
