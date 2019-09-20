@@ -1,9 +1,9 @@
 .post {
   margin-bottom: 3rem;
-  padding: 5rem 0 5rem 0;
+  padding: 0 0 5rem 0;
 
   @include for-tablet-portrait {
-    padding: 3rem 0 3rem 0;
+    padding: 0 0 3rem 0;
   }
 
   &:not(:last-child) {

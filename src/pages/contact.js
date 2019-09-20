@@ -4,7 +4,7 @@ import SEO from "../components/seo";
 
 const ContactPage = () => (
   <Layout>
-    <SEO title="Contact" />
+    <SEO title="Mauro Bono - Contact" />
     <h1>Contact</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe rem

@@ -13,7 +13,7 @@ const AboutPage = () => {
 
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO title="Mauro Bono - About" />
       <animated.div style={fade}>
         <PageTitle pageTitle="About" />
       </animated.div>

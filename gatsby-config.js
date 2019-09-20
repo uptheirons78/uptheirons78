@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Mauro Bono`,
+    title: `Web Developer`,
     description: `Web Designer and Developer from Rome, Italy. I've been coding since 2008 starting with PHP and Wordpress. I'm proficient with Javascript, React and Node`,
     author: `@UpTheIrons1978`,
   },

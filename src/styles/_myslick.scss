@@ -1,0 +1,68 @@
+// Arrows Styles
+
+.slick-arrow {
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+
+  &.slick-next,
+  &.slick-prev {
+    display: block;
+
+
+    &::before {
+      color: $main-color;
+      font-size: 3rem;
+      font-weight: 700;
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+
+    }
+  }
+
+  &.slick-next {
+    &::before {
+      content: ">";
+      position: absolute;
+      right: -10px;
+    }
+  }
+
+  &.slick-prev {
+    &::before {
+      content: "<";
+      position: absolute;
+      left: -10px;
+    }
+  }
+}
+
+// Dots Styles
+
+//color on active dot
+.slick-dots {
+  bottom: -50px !important;
+  li {
+    button {
+      &::before {
+        font-size: 8px !important;
+      }
+    }
+    &:hover {
+      button {
+        &::before {
+          color: $main-color !important;
+        }
+      }
+    }
+    &.slick-active {
+      button {
+        &::before {
+          color: $main-color !important;
+        }
+      }
+    }
+  }
+}

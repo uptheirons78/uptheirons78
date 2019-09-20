@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import me from "../images/mauro.jpg";
 import { useSpring, animated } from "react-spring";
+import styled from "styled-components";
 
 const IndexPage = props => {
   const name = "Mauro \nBono";
@@ -25,7 +26,7 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Mauro Bono" />
       <section className="home-container">
         <animated.div
           className="home-container__title-container"
@@ -48,7 +49,10 @@ const IndexPage = props => {
           <p>
             I'm specialized in HTML, CSS, JavaScript, ReactJS and Gatsby on the
             Front-End. Comfortable with NodeJS and MongoDB on the Back-End. I've
-            been working with Wordpress and PHP since 2008. Check out my Github
+            been working with Wordpress and PHP since 2008. Check out my{" "}
+            <StyledLink href="https://github.com/uptheirons78">
+              Github
+            </StyledLink>{" "}
             profile.
           </p>
         </animated.div>
@@ -58,3 +62,8 @@ const IndexPage = props => {
 };
 
 export default IndexPage;
+
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: #f4f4f4;
+`;

@@ -24,4 +24,7 @@ main {
   margin: 2vh auto;
   padding: 0 1.5rem 0 1.5rem;
   flex-grow: 1;
+  @media screen and (max-width: 1024px) {
+    max-width: 90vw;
+  }
 }

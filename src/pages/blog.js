@@ -4,18 +4,35 @@ import Layout from "../components/layout";
 import Post from "../components/Post";
 import SEO from "../components/seo";
 import PageTitle from "../components/PageTitle";
+import { useSpring, animated, config } from "react-spring";
 
 const BlogPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
+
+  const fade = useSpring({
+    config: config.slow,
+    from: { opacity: 0, marginLeft: -500 },
+    to: { opacity: 1, marginLeft: 0 },
+  });
+  const display = useSpring({
+    config: { duration: 2500 },
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+  });
+
   return (
     <Layout>
-      <SEO title="Blog" />
-      <PageTitle pageTitle="Blog" />
-      <div className="post-list">
-        {posts.map(post => {
-          return <Post key={post.node.id} post={post.node} />;
-        })}
-      </div>
+      <SEO title="Mauro Bono - Blog" />
+      <animated.div style={fade}>
+        <PageTitle pageTitle="Blog" />
+      </animated.div>
+      <animated.div style={display}>
+        <div className="post-list">
+          {posts.map(post => {
+            return <Post key={post.node.id} post={post.node} />;
+          })}
+        </div>
+      </animated.div>
     </Layout>
   );
 };
